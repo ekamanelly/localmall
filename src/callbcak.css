@@ -1,0 +1,188 @@
+.callback {
+    background-color:#ff9800 ;
+    width: 100%;
+    padding: 0 2rem;
+    height: 89Vh;
+  }
+  .callback svg {
+    width:80%;
+  }
+  
+  #three_leaf{
+    animation: leafchange 2s ease infinite alternate;
+    /* transform-origin: center; */
+  }
+  
+  
+  @keyframes leafchange {
+    0% {
+      transform: translateY(0)
+    }
+    /* 50% {
+      transform: translateY(3px);
+      fill: green;
+    } */
+    100% {
+      transform: translateY(-25px)
+    }
+  
+  }
+  
+  #engine {
+    animation: enginechange 2s infinite alternate;
+  
+  }
+  @keyframes enginechange {
+    0% {
+      transform:translateX(0);
+      fill:orangered;
+    }
+    100% {
+      transform:translateX(26px);
+      fill:#fff;
+    }
+  
+  }
+  
+  #engine #Vector, #engine #Vector_1, #engine #Vector_2, #engine #Vector_3 {
+    fill:#ddd !important;
+  }
+  #engine #Vector_2 {
+    transform: translate(0, 3rem);
+  }
+  
+  #Vector_7 {
+    fill:gold !important;
+  
+  }
+  
+  #engine #Vector_4 {
+    
+    z-index: 1 !important;
+    animation: Vector_4change 6s infinite alternate;
+  }
+  
+  @keyframes Vector_4change {
+    0% {
+      transform:translateX(5rem) translateY(-1.5rem);
+  
+      fill: #fff;
+    }
+    100% {
+      transform:translateX(-5rem) translateY(3rem);
+      
+      fill:orangered;
+    }
+  
+  }
+  #Vector_6 {
+    height: 1.rem;
+    animation: Vector_6change 2s ease infinite alternate ;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  
+  @keyframes Vector_6change {
+    0% {
+      fill:goldenrod;
+    }
+    
+    100% {
+      transform: scale(3);
+      fill:yellow;
+    }
+  }
+  
+  
+  #Vector_18 {
+    fill:#fff !important;
+    z-index: 0;
+    animation: Vector_18change 4s 3.5s 2 backwards;
+  }
+  
+  @keyframes Vector_18change {
+    0% {
+      transform: translateX(0);
+       /* translateX(0) 
+      rotate(0); */
+    }
+    50% {
+      fill: greenyellow;
+    }
+    
+    100%{
+      transform: translateX(35rem);
+      fill: green;
+      
+    } 
+  }
+  #Vector_24 {
+    fill:#aaa;
+    animation: Vector_24change 1s 5.5s infinite forwards;
+  }
+  
+  @keyframes Vector_24change {
+    0% {
+      fill: greenyellow;
+    }
+    100% {
+      fill: green;
+    }
+  }
+
+
+
+/* svg icons*/
+.svg__icon {
+  width: 4rem;
+  height: 2rem;
+  /* fill:rgb(83, 238, 91); */
+ 
+}
+.svg__div {
+  display: flex !important;
+  align-items: center;
+  /* background-color: orangered; */
+}
+.cart__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+.profile__img {
+  transform: translate(2px, 12px);
+  width:2.5rem;
+}
+
+.item__img {
+  height: 14rem;
+  object-fit: cover;
+}
+.price__text {
+  font-size: 1.3rem;
+  font-weight: 450;
+}
+
+/* test for platoon  */
+/* .slider .slides li img {
+
+  width: 49% !important;
+  background-size: contain !important;
+  
+  background-repeat: no-repeat !important;
+}
+.slider {
+  width:79% !important;
+}
+.slider .slides {
+  /* background-color: #9e9e9e; */
+/*   
+  height: 86vh !important;
+  /* margin-left: 72px; */
+/* }
+.ma-top-10 {
+  margin-top: 1rem;
+}  */
