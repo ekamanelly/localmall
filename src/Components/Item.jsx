@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useTransition, useSpring, animated} from 'react-spring'
-import { red } from 'color-name';
+
 
 const Item = (props) => {
     // const [show, set] = useState(props.cartEmpty)
@@ -9,23 +9,21 @@ const Item = (props) => {
     // enter: { opacity: 1 },
     // leave: { opacity: 0 },
     // })
+
+    //feedback for emptyCart. spring is sweet!!!
     const showWarning = useSpring({
         opacity: props.cartEmpty? 0 : 1,
-        // from: { opacity: 0 },
+        
       })
     const changeColor = useSpring({
         opacity: props.cartEmpty? 0 : 1,
         backgroundColor: props.cartEmpty? '#283593': '#b71c1c',
-        // borderRadius: props.cartEmpty? 0: "1rem"
+        
 
     })  
     const price = useSpring({ x: 0, from: { x: props.cost } })
-    //  return <animated.span>{pi.number}</animated.span>
-    // console.log(price)
   
-    return ( 
-        
-        
+    return (       
         <div  className="col s10 offset-s1 m6 l4">
             <div className="card">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -63,7 +61,7 @@ const Item = (props) => {
                             </svg> 
                         <div className="center waves-effect waves-light btn" onClick={() => props.onAddToCart(props.id)}>cart</div>
                         </div>
-                        <animated.div style={changeColor} className="center card" >
+                        <animated.div style={changeColor} className="center card item__warning" >
                             <animated.span style={showWarning} className="white-text">!!!Empty Cart</animated.span>
                         </animated.div>
                    

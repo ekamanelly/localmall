@@ -29,36 +29,35 @@ class Slide extends Component {
             <li>
                 <img src="/img/img3.jpg"/> 
                 <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+                <h3>cooking is not just an act</h3>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Agege bread.</h5>
                 </div>
             </li>
             <li>
                 <img src="/img/img5.jpg"/> 
                 <div class="caption left-align">
-                <h3>Left Aligned Caption</h3>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+                <h3> but an art that brings the beauty of a great meal</h3>
                 </div>
             </li>
             <li>
                 <img src="/img/img6.jpg"/> 
                 <div class="caption right-align">
-                <h3>Right Aligned Caption</h3>
+                <h3>garnished with the finest of ingredients</h3>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Basmatic rice and sauce</h5>
+                </div>
+            </li>
+            <li>
+                <img src="/img/img7.jpg"/> 
+                <div class="caption center-align">
+                <h3>in very attractive way to the table of a lover!</h3>
                 <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
                 </div>
             </li>
             <li>
                 <img src="/img/img7.jpg"/> 
                 <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="/img/img7.jpg"/> 
-                <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Here's our small slogan.</h5>
+                <h3>I live for this Art</h3>
+                <h5 class="light grey-text text-lighten-3 hide-on-small-only">Words by 'Quantum'</h5>
                 </div>
             </li>
             </ul>

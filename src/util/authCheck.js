@@ -11,8 +11,8 @@ class AuthCheck extends Component {
         if(this.props.auth.isAuthenticated()){
             this.props.LOGIN_SUCCESS()
             this.props.ADD_PROFILE(this.props.auth.profile)
-            history.replace('/news')
-            console.log('login-success')
+            history.replace('/')
+            console.log('login-success'+ this.props.auth.profile)
         } else {
             this.props.LOGIN_FAILURE()
             this.props.REMOVE_PROFILE()

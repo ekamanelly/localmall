@@ -1,3 +1,8 @@
+/* Used materialcss which half the task is done 
+Try to master booststrap plzzzz */
+
+/* SVG animation, try localhost:3000/callback to enjoy it.
+Wished ! knew react-spring earlier*/
 .callback {
     background-color:#ff9800 ;
     width: 100%;
@@ -129,42 +134,138 @@
       fill: green;
     }
   }
+  /* all Callback animations stopped right there, up 'dia!!' */
+  /*  */
+/*  */
 
 
-
-/* svg icons*/
+/* svg icons, you will find 3 properties with this rule in Item component*/
 .svg__icon {
   width: 4rem;
   height: 2rem;
   /* fill:rgb(83, 238, 91); */
  
 }
-.svg__div {
-  display: flex !important;
-  align-items: center;
-  /* background-color: orangered; */
-}
-.cart__div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-
-
-}
+/* check navBar component  */
 .profile__img {
   transform: translate(2px, 12px);
   width:2.5rem;
 }
 
+/* check Item component  */
+.svg__div {
+  display: flex !important;
+  align-items: center;
+  /* background-color: orangered; */
+}
+/* check Item component  */
+.cart__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* check Item component  */
 .item__img {
   height: 14rem;
   object-fit: cover;
+}
+.item__warning {
+  margin: 0 !important;
 }
 .price__text {
   font-size: 1.3rem;
   font-weight: 450;
 }
+
+/* check CartItem component  */
+.payment__view {
+    height: 80vh;
+    background-image: url(/img/mastercard.png);
+    /* background-color: gray; */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    z-index: 10;
+    width: 95vw;
+    position: fixed;
+    top:55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.payment__view > div {
+  opacity:1 !important;
+  height: 25rem;
+  /* animation: SlidePayment .7s 1 alternate ; */
+}
+.btn__delete {
+  color: rgb(233, 30, 99);
+  font-size: 1.8rem;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+
+}
+.btn__delete:hover {
+  color: red;
+  transform: scale(.8);
+}
+
+
+/* check Cart, the buttom */
+.input__area {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+.input__field {
+  width: 65%;
+}
+.i__input {
+  padding-left: 2rem !important;
+  color: white;
+}
+.btn__close {
+    color: white;
+    border: solid 2px #ddd;
+    cursor: pointer;
+    font-size: 2.5rem;
+    transform: translate(-79px, 51px);
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    
+}
+.btn__close:hover {
+  box-shadow: 2px 4px 1rem grey;
+  /* transform: rotateX(180deg); */
+
+}
+
+.btn__payment {
+  color: lime;
+  font-size: 2rem;
+  width:2rem;
+  cursor: pointer;
+
+}
+
+
+
+
+
+/* get back to you later */
+/* @keyframes slidePayment {
+  0%{
+    transform: scale(.6);
+  }
+  0%{
+    transform: scale(1);
+  }
+} */
 
 /* test for platoon  */
 /* .slider .slides li img {

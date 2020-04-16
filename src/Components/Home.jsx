@@ -10,21 +10,15 @@ import Slide from './Slide';
 class Home extends Component {
     state = { 
         item: [
-            {id:'a1', name:'Galic', img:'img/img2.jpg', price:100, cost:0, quantity:0, unit:'cup', cartEmpty: true},
-            {id:'a2', name:'Onion', img:'img/img8.jpg', price:10, cost:0, quantity:0, unit:'cup', cartEmpty: true },
-            {id:'a3', name:'Fresh Peper', img:'img/img1.jpg', price:170, cost:0, quantity:0, unit:'cup', cartEmpty: true},
-            {id:'a4', name:'Bread', img:'img/img5.jpg', price:100, cost:0, quantity:0, unit:'cup', cartEmpty: true },
-            {id:'a5', name:'Rice', img:'img/img6.jpg', price:1036, cost:0, quantity:0, unit:'cup', cartEmpty: true },
+            {id:'a1', name:'Galic', img:'img/img2.jpg', price:100, cost:0, quantity:0, unit:'pob', cartEmpty: true},
+            {id:'a2', name:'Onion', img:'img/img8.jpg', price:10, cost:0, quantity:0, unit:'pob', cartEmpty: true },
+            {id:'a3', name:'Fresh Peper', img:'img/img1.jpg', price:170, cost:0, quantity:0, unit:'basket', cartEmpty: true},
+            {id:'a4', name:'Bread', img:'img/img5.jpg', price:100, cost:0, quantity:0, unit:'loaf', cartEmpty: true },
+            {id:'a5', name:'Rice', img:'img/img6.jpg', price:14036, cost:0, quantity:0, unit:'bag', cartEmpty: true },
             {id:'a6', name:'Iec Cream', img:'img/img7.jpg', price:180, cost:0, quantity:0, unit:'cup', cartEmpty: true },
-            {id:'a7', name:'Toast', img:'img/img3.jpg', price:110, cost:0, quantity:0, unit:'cup', cartEmpty: true },
+            {id:'a7', name:'Toast', img:'img/img3.jpg', price:110, cost:0, quantity:0, unit:'loaf', cartEmpty: true },
             {id:'a8', name:'Chocolate n Milk', img:'img/img4.jpg', price:190, cost:0, quantity:0, unit:'cup', cartEmpty: true },
-        ],
-        slide: [
-            { bigCaption:" talk one ",  smallCaption: "talk on bit",  img:"/img/img3.jpg" },
-            { bigCaption:" talk one ",  smallCaption: "talk on bit",  img:"/img/img3.jpg" },
-            { bigCaption:" talk one ",  smallCaption: "talk on bit",  img:"/img/img3.jpg" },
-            { bigCaption:" talk one ",  smallCaption: "talk on bit",  img:"/img/img3.jpg" },
-            
+            {id:'a9', name:'Bread', img:'img/img5.jpg', price:100, cost:0, quantity:0, unit:'loaf', cartEmpty: true },
         ],
         isCartVisable: false,
         
@@ -52,13 +46,6 @@ class Home extends Component {
         }))
      }
 
-    //  isCartEmpty = (id) => {
-    //      if(){
-    //          return <p>View Cart</p>
-    //      }else {
-    //          return <p>empty Cart</p>
-    //      }
-    //  }
      handleIsCartEmpty = (id) => {
         this.setState(prevState => ({
             item: prevState.item.map(cur => 
@@ -66,7 +53,7 @@ class Home extends Component {
                  {...cur, cartEmpty:false}:
                   cur),      
         }))
-        //  this.setState({})
+       
      }
      cartOrItem = (id) => {
          if(this.state.isCartVisable){
@@ -107,7 +94,7 @@ class Home extends Component {
     render() { 
         return ( 
             <div className="row">                
-                <div className="col l10 m10 offset-l1 offset-m1">            
+                <div className="col l10 m10 offset-l1 offset-m1 s12">            
                 <section >
                   <Slide/>
                 </section>                

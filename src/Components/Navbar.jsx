@@ -16,6 +16,10 @@ import {connect} from 'react-redux';
 
 
 class Navber extends Component {
+    state = {
+        profile:{},
+        isloader:false
+    }
      
     componentDidMount(){
         document.addEventListener('DOMContentLoaded', function() {
@@ -23,69 +27,72 @@ class Navber extends Component {
             var instances = M.Sidenav.init(elems,{});
           });
         //   console.log(this.props.userProfile)
+        if(this.props.profile!==null && this.props.isAuthenticatd ===true){
+            this.setState({
+                profile:this.props.profile,
+                isloader:true
+            })
+
+        }
+       
     }
     handleLogout = () => {
         this.props.auth.logout();
-        // this.props.LOGIN_FAILURE();
-
-
+        this.props.LOGIN_FAILURE();
     }
-    showProfile = () =>{
-        if(this.props.isAuthenticated===true && this.props.profile!==null) {
-            return (
-                    <a>
-                         <img className='profile__img circle' src={this.props.profile.picture}/>
-                    </a>            
-            )
-        }else{          
-            return null
-        }}
-
+   
     render() { 
-        // console.log(this.props.profile)
-        return ( 
-            <div className="navbar-fixed">
-                <nav className="nav-wrapper   indigo darken-3">
-                    <div className="container">
-                        <a href="" className="brand-logo">localMall</a>
-                        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
-                        <ul id="nav-mobile" className="right hide-on-med-and-down">  
-                            {this.props.isAuthenticated=== false?
-                             <li onClick={ () => this.props.auth.login()}><a>Login</a></li>:
-                             <li onClick={ this.handleLogout}><a>logout</a></li>}                      
-                            <li><Link to="/">Food</Link></li>
-                            <li><Link to="/news">Goodnews</Link></li>
-                            <li><Link to="/service">Service</Link></li>
-                            
-                            <li className="valign-wrapper">
-                                <Link to='/sell'>                                
-                                {
-                                    // this.showProfile()
-                                }
-                                </Link>
-                            </li>                                                 
-                        </ul>
-                    </div>                   
-                </nav>
-                <ul className="sidenav" id="mobile-demo">
-                            {this.props.isAuthenticated=== false?
-                             <li onClick={ () => this.props.auth.login()}><a>Login</a></li>:
-                             <li onClick={ this.handleLogout}><a>logout</a></li>}                      
-                            <li><Link to="/">Food</Link></li>
-                            <li><Link to="/news">Goodnews</Link></li>
-                            <li><Link to="/service">Service</Link></li>
-                            
-                            <li className="valign-wrapper">
-                                <Link to='/sell'>                                
-                                {
-                                    this.showProfile()
-                                }
-                                </Link>
-                            </li>     
-                </ul>    
-            </div>
-            
-         );
+        const {isloader } = this.state;
+        const {picture} = this.state.profile;
+        console.log(this.state)
+            return ( 
+                <div className="navbar-fixed">
+                    <nav className="nav-wrapper   indigo darken-3">
+                        <div className="container">
+                            <a href="" className="brand-logo">localMall</a>
+                            <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                            <ul id="nav-mobile" className="right hide-on-med-and-down">  
+                                {this.props.isAuthenticated=== false?
+                                 <li onClick={ () => this.props.auth.login()}><a>Login</a></li>:
+                                 <li onClick={ this.handleLogout}><a>logout</a></li>}                      
+                                <li><Link to="/">Food</Link></li>
+                                <li><Link to="/news">Goodnews</Link></li>
+                                <li><Link to="/service">Service</Link></li>
+                                
+                                <li className="valign-wrapper">
+                                    <Link to='/sell'>                                
+                                    {   isloader?
+                                        <img className='profile__img circle' src={picture}/>:
+                                        null     
+                                    }
+                                    </Link>
+                                </li>                                                 
+                            </ul>
+                        </div>                   
+                    </nav>
+                    <ul className="sidenav indigo darken-3" id="mobile-demo">
+                                {this.props.isAuthenticated=== false?
+                                 <li onClick={ () => this.props.auth.login()}><a>Login</a></li>:
+                                 <li onClick={ this.handleLogout}><a>logout</a></li>}                      
+                                <li><Link to="/">Food</Link></li>
+                                <li><Link to="/news">Goodnews</Link></li>
+                                <li><Link to="/service">Service</Link></li>
+                                
+                                <li className="valign-wrapper">
+                                    <Link to='/sell'>                                
+                                    {   isloader?
+                                        <img className='profile__img circle' src={picture}/>:
+                                        null 
+                                       
+                                    }
+                                    </Link>
+                                </li>     
+                    </ul>    
+                </div>
+                
+             )
+        
+        
     }
 }
 function mapStateToProps(state) {

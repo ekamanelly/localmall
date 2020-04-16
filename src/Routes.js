@@ -10,6 +10,7 @@ import {loginFailure, loginSuccess, addProfile, removeProfile} from "./redux/act
 //style
 import './callbcak.css'
 import 'materialize-css/dist/css/materialize.css';
+import {Transition} from 'react-spring/renderprops'
 
 //Components
 import Navber from './Components/Navbar';
